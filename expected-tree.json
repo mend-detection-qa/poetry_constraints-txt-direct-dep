@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "pm": "poetry",
+  "pm_version_tested": "1.8.0",
+  "source_file": "https://github.com/mend-detection-qa/poetry_constraints-txt-direct-dep/blob/main/pyproject.toml",
+  "root": {
+    "name": "poetry-constraints-txt-direct-dep",
+    "version": "0.1.0",
+    "dependencies": [
+      {
+        "name": "requests",
+        "version": "2.30.0",
+        "scope": "main",
+        "direct": true,
+        "mediation": "DIRECT DEP pinned by constraints.txt. pyproject.toml declares `requests = \">=2.0\"` (wide range), constraints.txt declares `requests==2.30.0`. poetry.lock (committed) shows requests at the latest 2.32.x because Poetry does NOT read constraints.txt natively. Mend applies the constraint independently of the lockfile.",
+        "dependencies": [
+          {
+            "name": "certifi",
+            "version": "2026.4.22",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.4.7",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "idna",
+            "version": "3.15",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "urllib3",
+            "version": "2.7.0",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "total_packages": 5,
+    "direct_dependencies": 1,
+    "transitive_dependencies": 4,
+    "constraint_applied": "requests==2.30.0 via constraints.txt (DIRECT dep, overlaid on Poetry-resolved tree)",
+    "scopes_included": ["main"],
+    "notes": "Direct-dep constraint axis. poetry.lock diverges from scan output at requests (lock=2.32.x, scan=2.30.0)."
+  }
+}
