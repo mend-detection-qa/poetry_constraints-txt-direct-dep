@@ -39,7 +39,7 @@
       },
 
       "expected_dependency_pairs": [
-        {"artifactId": "requests", "version": "2.7.0", "groupId": "requests"}
+        {"artifactId": "requests", "version": "2.34.2", "groupId": "requests"}
       ]
     },
 
